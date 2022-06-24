@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+import AjaxApis from "./components/AjaxApis";
+import CicloDeVida, { CicloDeVidaPadre } from "./components/CicloDeVida";
+import ComunicacionComponentes from "./components/ComunicacionComponentes";
+import CuentaRegresiva from "./components/CuentaRegresiva";
+import Estado from "./components/Estado";
+import Eventos from "./components/Eventos";
+import EventosConPropertyInicializers from "./components/EventosConPropertyInicializers";
+import EventosSinteticos from "./components/EventosSinteticos";
+import Propiedades from "./components/Propiedades";
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <AjaxApis />
+        <hr />
+        <CicloDeVidaPadre />
+        <hr />
+        <ComunicacionComponentes />
+        <hr />
+        <EventosSinteticos />
+        {/* <EventosConPropertyInicializers /> */}
+        {/* <Eventos /> */}
+        {/*  <hr></hr>
+        <CuentaRegresiva horas={13} min={1} seg={10} />
+        <hr />
+        <Estado /> */}
+        <hr />
+        {/* <Propiedades /> */}
+      </div>
+    );
+  }
 }
 
 export default App;
